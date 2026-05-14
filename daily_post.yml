@@ -22,8 +22,6 @@ jobs:
           pip install openai requests
 
       - name: Generate Post
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python scripts/generate_post.py
 
       - name: Commit and Push changes
