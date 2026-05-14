@@ -1,0 +1,14 @@
+title: Cosplay AI Blog
+email: antonored908@gmail.com
+description: >-
+  Il primo blog interamente dedicato al mondo del cosplay, 
+  con articoli giornalieri e immagini generate dall'IA.
+baseurl: ""
+url: "https://yourusername.github.io"
+twitter_username: cosplay_ai
+github_username:  yourusername
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
