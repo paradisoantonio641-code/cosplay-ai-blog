@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Il Mio Blog Cosplay AI
+title: Home
 ---
 
 <div class="home">
@@ -9,19 +9,20 @@ title: Il Mio Blog Cosplay AI
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span class="post-meta">{{ post.date | date: "%d %B %Y" }}</span>
         <h2>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
         </h2>
         {% if post.image %}
-          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" style="max-width: 100%; height: auto; border-radius: 8px; margin-top: 10px;">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="post-image">
         {% endif %}
-        <p>{{ post.excerpt }}</p>
+        <div class="post-excerpt">
+          {{ post.excerpt | strip_html | truncatewords: 50 }}
+        </div>
+        <a href="{{ post.url | relative_url }}" style="display: inline-block; margin-top: 10px; color: #6e8efb; font-weight: bold;">Leggi tutto &rarr;</a>
       </li>
     {% endfor %}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 </div>
