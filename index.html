@@ -1,0 +1,27 @@
+---
+layout: default
+title: Il Mio Blog Cosplay AI
+---
+
+<div class="home">
+  <h1 class="page-heading">Ultimi Articoli Cosplay</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h2>
+        {% if post.image %}
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" style="max-width: 100%; height: auto; border-radius: 8px; margin-top: 10px;">
+        {% endif %}
+        <p>{{ post.excerpt }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+</div>
