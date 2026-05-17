@@ -1,14 +1,14 @@
 ---
 layout: default
-title: "Chi Siamo - CosplayItalia AI"
-description: "Scopri la storia di CosplayItalia AI, il primo blog cosplay italiano con articoli giornalieri e foto generate dall'intelligenza artificiale."
+title: "Chi Siamo - CosplayItalia"
+description: "Scopri la storia di CosplayItalia, il blog cosplay italiano con articoli giornalieri, guide e tutorial."
 permalink: /chi-siamo/
 ---
 
 <section class="page-hero">
   <div class="container">
     <h1>Chi Siamo</h1>
-    <p>Il primo blog cosplay italiano con contenuti AI giornalieri</p>
+    <p>Il blog cosplay italiano con contenuti giornalieri per la community</p>
   </div>
 </section>
 
@@ -16,9 +16,9 @@ permalink: /chi-siamo/
 
 ## La Nostra Missione
 
-**CosplayItalia AI** nasce dalla passione per il cosplay e dalla volontà di creare una risorsa italiana completa, aggiornata e accessibile a tutti. Ogni giorno pubblichiamo un nuovo articolo dedicato al mondo del cosplay: guide, tutorial, recensioni di materiali e molto altro.
+**CosplayItalia** nasce dalla passione per il cosplay e dalla volontà di creare una risorsa italiana completa, aggiornata e accessibile a tutti. Ogni giorno pubblichiamo un nuovo articolo dedicato al mondo del cosplay: guide, tutorial, recensioni di materiali e molto altro.
 
-Ciò che ci rende unici è l'utilizzo dell'intelligenza artificiale per generare immagini cosplay originali e di alta qualità che illustrano i nostri contenuti. Ogni foto che vedi sul nostro blog è stata creata da zero da un'AI, rendendo ogni articolo visivamente unico.
+La nostra missione è fornire ispirazione e supporto a tutti i cosplayer, dai principianti ai veterani, attraverso contenuti di qualità e immagini mozzafiato che illustrano l'arte del costume.
 
 ## Cosa Trovi sul Blog
 

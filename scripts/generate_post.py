@@ -26,7 +26,7 @@ TOPICS = [
     "Elettronica nel cosplay: LED e motori base"
 ]
 
-def generate_content_with_ai(topic):
+def generate_content(topic):
     """Genera il contenuto dell'articolo usando un'API gratuita o un template avanzato"""
     print(f"Generazione contenuto per: {topic}")
     
@@ -72,7 +72,7 @@ La community cosplay è meravigliosa proprio perché è sempre pronta ad aiutars
 
 Speriamo che questa guida su {topic.lower()} ti abbia fornito gli strumenti e l'ispirazione necessari per il tuo prossimo progetto. Ricorda che il cosplay non deve essere perfetto, deve essere divertente!
 
-Continua a seguire CosplayItalia AI per nuovi articoli ogni giorno. E se questo articolo ti è stato utile, considera di supportarci con una piccola donazione tramite il pulsante PayPal qui sotto!
+Continua a seguire CosplayItalia per nuovi articoli ogni giorno. E se questo articolo ti è stato utile, considera di supportarci con una piccola donazione tramite il pulsante PayPal qui sotto!
 """
     
     # Genera un prompt per l'immagine
@@ -117,7 +117,7 @@ def create_post():
     topic = random.choice(TOPICS)
     
     # Genera contenuto
-    titolo, contenuto, prompt_img = generate_content_with_ai(topic)
+    titolo, contenuto, prompt_img = generate_content(topic)
     
     # Crea slug e data
     date_str = datetime.now().strftime("%Y-%m-%d")
@@ -139,9 +139,9 @@ layout: post
 title: "{titolo}"
 date: {date_str} {time_str} +0200
 categories: tutorial
-tags: [cosplay, guide, fai-da-te, ai-generated]
+tags: [cosplay, guide, fai-da-te]
 image: {img_path}
-author: "CosplayItalia AI"
+author: "CosplayItalia"
 ---
 
 {contenuto}

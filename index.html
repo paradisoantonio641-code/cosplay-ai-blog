@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "CosplayItalia AI - Il Blog Cosplay Italiano con Foto AI"
-description: "Il blog cosplay italiano con articoli giornalieri, guide, tutorial e foto generate dall'intelligenza artificiale. Scopri il mondo del cosplay!"
+title: "CosplayItalia AI - Il Blog Cosplay Italiano"
+description: "Il blog cosplay italiano con articoli giornalieri, guide, tutorial e le migliori foto della community. Scopri il mondo del cosplay!"
 ---
 
 <!-- Hero Section -->
@@ -9,15 +9,15 @@ description: "Il blog cosplay italiano con articoli giornalieri, guide, tutorial
   <div class="container">
     <div class="hero-content">
       <div class="hero-badge">
-        <i class="fas fa-robot"></i>
-        Articolo nuovo ogni giorno con AI
+        <i class="fas fa-fire"></i>
+        Articolo nuovo ogni giorno
       </div>
       <h1 class="hero-title">
         Il Blog Cosplay<br>
         <span>Italiano #1</span>
       </h1>
       <p class="hero-subtitle">
-        Guide, tutorial, foto AI e tutto il mondo del cosplay. Aggiornato ogni giorno con contenuti freschi generati dall'intelligenza artificiale.
+        Guide, tutorial, foto e tutto il mondo del cosplay. Aggiornato ogni giorno con contenuti freschi e approfondimenti esclusivi.
       </p>
       <div class="hero-buttons">
         <a href="#ultimi-articoli" class="btn-primary">
@@ -41,7 +41,7 @@ description: "Il blog cosplay italiano con articoli giornalieri, guide, tutorial
       </div>
       <div class="stat-item">
         <span class="stat-number">100%</span>
-        <span class="stat-label">Foto AI originali</span>
+        <span class="stat-label">Foto Originali</span>
       </div>
       <div class="stat-item">
         <span class="stat-number">ITA</span>
@@ -65,7 +65,7 @@ description: "Il blog cosplay italiano con articoli giornalieri, guide, tutorial
         <i class="fas fa-fire"></i> Ultimi Articoli
       </div>
       <h2 class="section-title">Cosplay del Giorno</h2>
-      <p class="section-subtitle">Nuovi contenuti pubblicati ogni giorno, foto generate con AI incluse</p>
+      <p class="section-subtitle">Nuovi contenuti pubblicati ogni giorno, con guide e foto esclusive</p>
     </div>
 
     <!-- Featured Post -->
@@ -88,7 +88,7 @@ description: "Il blog cosplay italiano con articoli giornalieri, guide, tutorial
         <p>{{ featured.excerpt | strip_html | truncatewords: 40 }}</p>
         <div class="post-card-meta" style="margin-bottom: 20px;">
           <span><i class="fas fa-calendar-alt"></i> {{ featured.date | date: "%d %B %Y" }}</span>
-          <span><i class="fas fa-robot"></i> AI Generated</span>
+          <span><i class="fas fa-star"></i> In Evidenza</span>
         </div>
         <a href="{{ featured.url | relative_url }}" class="btn-primary">
           <i class="fas fa-book-open"></i> Leggi l'articolo
@@ -110,7 +110,7 @@ description: "Il blog cosplay italiano con articoli giornalieri, guide, tutorial
           {% if post.categories.first %}
           <span class="post-card-category">{{ post.categories.first | capitalize }}</span>
           {% endif %}
-          <span class="post-card-ai-badge"><i class="fas fa-robot"></i> AI Photo</span>
+          <span class="post-card-ai-badge"><i class="fas fa-camera"></i> Foto Originale</span>
         </div>
         <div class="post-card-body">
           <div class="post-card-meta">
@@ -147,7 +147,7 @@ description: "Il blog cosplay italiano con articoli giornalieri, guide, tutorial
 <section class="newsletter-section">
   <div class="container">
     <h2>Non perdere nessun articolo!</h2>
-    <p>Iscriviti via RSS e ricevi ogni giorno il nuovo articolo cosplay con foto AI</p>
+    <p>Iscriviti via RSS e ricevi ogni giorno il nuovo articolo cosplay</p>
     <div class="hero-buttons">
       <a href="{{ '/feed.xml' | relative_url }}" class="btn-primary">
         <i class="fas fa-rss"></i> Iscriviti via RSS

@@ -1,11 +1,11 @@
-# CosplayItalia AI Blog
+# CosplayItalia Blog
 
-Il primo blog cosplay italiano con articoli giornalieri automatici e foto generate dall'intelligenza artificiale.
+Il primo blog cosplay italiano con articoli giornalieri e le migliori foto della community.
 
 ## Caratteristiche
 
-- **Articoli giornalieri automatici** tramite GitHub Actions
-- **Foto cosplay AI** generate con Pollinations.ai
+- **Articoli giornalieri** con guide e tutorial approfonditi
+- **Foto di alta qualità** per ogni articolo
 - **Donazioni PayPal** integrate in ogni articolo
 - **Design responsive** ottimizzato per mobile e desktop
 - **SEO ottimizzato** con meta tag, sitemap e feed RSS
@@ -46,4 +46,4 @@ Le donazioni sono configurate per l'email `antoniored908@gmail.com`. Per modific
 
 ## Licenza
 
-Contenuti generati con AI. Uso personale e commerciale consentito.
+Tutti i diritti riservati. Uso personale e commerciale consentito.

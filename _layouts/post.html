@@ -33,7 +33,7 @@ layout: default
 
           <div class="post-meta-bar">
             <span class="post-date"><i class="fas fa-calendar-alt"></i> {{ page.date | date: "%d %B %Y" }}</span>
-            <span class="post-author"><i class="fas fa-robot"></i> {{ page.author | default: "CosplayItalia AI" }}</span>
+            <span class="post-author"><i class="fas fa-user"></i> {{ page.author | default: "CosplayItalia" }}</span>
             <span class="post-read-time"><i class="fas fa-clock"></i> 3 min lettura</span>
           </div>
         </header>
@@ -42,7 +42,7 @@ layout: default
         {% if page.image %}
         <figure class="post-featured-image">
           <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" loading="lazy">
-          <figcaption><i class="fas fa-robot"></i> Immagine generata con intelligenza artificiale</figcaption>
+          <figcaption><i class="fas fa-camera"></i> Foto del giorno</figcaption>
         </figure>
         {% endif %}
 
@@ -86,7 +86,7 @@ layout: default
         <div class="donation-box">
           <div class="donation-icon">💖</div>
           <h3>Ti è piaciuto questo articolo?</h3>
-          <p>Supporta il blog CosplayItalia AI con una piccola donazione. Ogni contributo ci aiuta a creare contenuti migliori ogni giorno!</p>
+          <p>Supporta il blog CosplayItalia con una piccola donazione. Ogni contributo ci aiuta a creare contenuti migliori ogni giorno!</p>
           <a href="https://www.paypal.com/donate/?business=antoniored908%40gmail.com&no_recurring=0&item_name=Supporto+Blog+CosplayItalia+AI&currency_code=EUR" target="_blank" rel="noopener" class="paypal-donate-btn large">
             <i class="fab fa-paypal"></i> Dona con PayPal
           </a>
