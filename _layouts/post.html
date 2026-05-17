@@ -1,0 +1,194 @@
+---
+layout: default
+---
+<article class="post-article">
+  <div class="container">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <span>/</span>
+      {% if page.categories.first %}
+      <a href="{{ '/categoria/' | append: page.categories.first | relative_url }}">{{ page.categories.first | capitalize }}</a>
+      <span>/</span>
+      {% endif %}
+      <span>{{ page.title | truncatewords: 6 }}</span>
+    </nav>
+
+    <div class="post-layout">
+      <!-- Main Post Content -->
+      <div class="post-main">
+
+        <!-- Post Header -->
+        <header class="post-header">
+          {% if page.categories %}
+          <div class="post-categories">
+            {% for cat in page.categories %}
+            <a href="{{ '/categoria/' | append: cat | relative_url }}" class="category-badge">{{ cat | capitalize }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <h1 class="post-title">{{ page.title }}</h1>
+
+          <div class="post-meta-bar">
+            <span class="post-date"><i class="fas fa-calendar-alt"></i> {{ page.date | date: "%d %B %Y" }}</span>
+            <span class="post-author"><i class="fas fa-robot"></i> {{ page.author | default: "CosplayItalia AI" }}</span>
+            <span class="post-read-time"><i class="fas fa-clock"></i> 3 min lettura</span>
+          </div>
+        </header>
+
+        <!-- Featured Image -->
+        {% if page.image %}
+        <figure class="post-featured-image">
+          <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" loading="lazy">
+          <figcaption><i class="fas fa-robot"></i> Immagine generata con intelligenza artificiale</figcaption>
+        </figure>
+        {% endif %}
+
+        <!-- AdSense Banner (dopo immagine) -->
+        {% if site.google_adsense and site.google_adsense != "" %}
+        <div class="ad-banner">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="{{ site.google_adsense }}"
+               data-ad-slot="XXXXXXXXXX"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+        {% endif %}
+
+        <!-- Post Content -->
+        <div class="post-content">
+          {{ content }}
+        </div>
+
+        <!-- Tags -->
+        {% if page.tags %}
+        <div class="post-tags">
+          <i class="fas fa-tags"></i>
+          {% for tag in page.tags %}
+          <a href="{{ '/tag/' | append: tag | relative_url }}" class="tag-badge">#{{ tag }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Share Buttons -->
+        <div class="share-section">
+          <h3><i class="fas fa-share-alt"></i> Condividi questo articolo</h3>
+          <div class="share-buttons">
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank" rel="noopener" class="share-btn facebook">
+              <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+            <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url }}" target="_blank" rel="noopener" class="share-btn twitter">
+              <i class="fab fa-x-twitter"></i> X/Twitter
+            </a>
+            <a href="https://wa.me/?text={{ page.title | url_encode }}%20{{ page.url | absolute_url }}" target="_blank" rel="noopener" class="share-btn whatsapp">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://www.pinterest.com/pin/create/button/?url={{ page.url | absolute_url }}&media={{ page.image | absolute_url }}&description={{ page.title | url_encode }}" target="_blank" rel="noopener" class="share-btn pinterest">
+              <i class="fab fa-pinterest-p"></i> Pinterest
+            </a>
+          </div>
+        </div>
+
+        <!-- PayPal Donation Box -->
+        <div class="donation-box">
+          <div class="donation-icon">💖</div>
+          <h3>Ti è piaciuto questo articolo?</h3>
+          <p>Supporta il blog CosplayItalia AI con una piccola donazione. Ogni contributo ci aiuta a creare contenuti migliori ogni giorno!</p>
+          <a href="https://www.paypal.com/donate/?business=antoniored908%40gmail.com&no_recurring=0&item_name=Supporto+Blog+CosplayItalia+AI&currency_code=EUR" target="_blank" rel="noopener" class="paypal-donate-btn large">
+            <i class="fab fa-paypal"></i> Dona con PayPal
+          </a>
+          <p class="donation-note">Sicuro, veloce e protetto da PayPal</p>
+        </div>
+
+        <!-- AdSense Banner (fine articolo) -->
+        {% if site.google_adsense and site.google_adsense != "" %}
+        <div class="ad-banner">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="{{ site.google_adsense }}"
+               data-ad-slot="XXXXXXXXXX"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+        {% endif %}
+
+        <!-- Post Navigation -->
+        <nav class="post-navigation">
+          {% if page.previous.url %}
+          <a href="{{ page.previous.url | relative_url }}" class="nav-prev">
+            <span class="nav-label"><i class="fas fa-arrow-left"></i> Articolo precedente</span>
+            <span class="nav-title">{{ page.previous.title | truncatewords: 8 }}</span>
+          </a>
+          {% endif %}
+          {% if page.next.url %}
+          <a href="{{ page.next.url | relative_url }}" class="nav-next">
+            <span class="nav-label">Articolo successivo <i class="fas fa-arrow-right"></i></span>
+            <span class="nav-title">{{ page.next.title | truncatewords: 8 }}</span>
+          </a>
+          {% endif %}
+        </nav>
+
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="post-sidebar">
+
+        <!-- AdSense Sidebar -->
+        {% if site.google_adsense and site.google_adsense != "" %}
+        <div class="sidebar-widget ad-widget">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="{{ site.google_adsense }}"
+               data-ad-slot="XXXXXXXXXX"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+        {% endif %}
+
+        <!-- Donate Widget -->
+        <div class="sidebar-widget donate-widget">
+          <h4><i class="fab fa-paypal"></i> Supportaci</h4>
+          <p>Se ami il cosplay, offrici un caffè!</p>
+          <a href="https://www.paypal.com/donate/?business=antoniored908%40gmail.com&no_recurring=0&item_name=Supporto+Blog+CosplayItalia+AI&currency_code=EUR" target="_blank" rel="noopener" class="paypal-donate-btn small">
+            Dona ora
+          </a>
+        </div>
+
+        <!-- Recent Posts Widget -->
+        <div class="sidebar-widget">
+          <h4><i class="fas fa-fire"></i> Ultimi Articoli</h4>
+          <ul class="recent-posts">
+            {% for post in site.posts limit:5 %}
+            <li>
+              {% if post.image %}
+              <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+              {% endif %}
+              <div>
+                <a href="{{ post.url | relative_url }}">{{ post.title | truncatewords: 8 }}</a>
+                <span class="post-date-small">{{ post.date | date: "%d/%m/%Y" }}</span>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <!-- Newsletter Widget -->
+        <div class="sidebar-widget newsletter-widget">
+          <h4><i class="fas fa-envelope"></i> Newsletter</h4>
+          <p>Ricevi ogni giorno il nuovo articolo cosplay!</p>
+          <a href="{{ '/feed.xml' | relative_url }}" class="rss-btn">
+            <i class="fas fa-rss"></i> Iscriviti via RSS
+          </a>
+        </div>
+
+      </aside>
+    </div>
+
+  </div>
+</article>

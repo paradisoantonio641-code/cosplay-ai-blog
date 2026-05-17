@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="keywords" content="cosplay, tutorial cosplay, guide cosplay, costume, anime, manga, cosplay italiano, cosplay AI">
+  <meta name="author" content="{{ site.author.name }}">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  {% if page.image %}
+  <meta property="og:image" content="{{ page.image | absolute_url }}">
+  {% else %}
+  <meta property="og:image" content="{{ '/assets/images/cosplay-hero-banner.jpg' | absolute_url }}">
+  {% endif %}
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+  <!-- Google AdSense (attiva dopo approvazione) -->
+  {% if site.google_adsense and site.google_adsense != "" %}
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.google_adsense }}" crossorigin="anonymous"></script>
+  {% endif %}
+
+  <!-- Google Analytics -->
+  {% if site.google_analytics and site.google_analytics != "" %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
+
+  <!-- Jekyll SEO Tag -->
+  {% seo %}
+  {% feed_meta %}
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span><i class="fas fa-fire"></i> Articolo nuovo ogni giorno!</span>
+      <span><i class="fas fa-robot"></i> Foto generate con AI</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="{{ '/' | relative_url }}" class="site-logo">
+          <span class="logo-icon">✦</span>
+          <span class="logo-text">CosplayItalia<span class="logo-ai"> AI</span></span>
+        </a>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="{{ '/guide/' | relative_url }}"><i class="fas fa-book"></i> Guide</a></li>
+            <li><a href="{{ '/tutorial/' | relative_url }}"><i class="fas fa-tools"></i> Tutorial</a></li>
+            <li><a href="{{ '/galleria/' | relative_url }}"><i class="fas fa-images"></i> Galleria</a></li>
+            <li><a href="{{ '/chi-siamo/' | relative_url }}"><i class="fas fa-info-circle"></i> Chi Siamo</a></li>
+          </ul>
+        </nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="{{ '/guide/' | relative_url }}"><i class="fas fa-book"></i> Guide</a></li>
+      <li><a href="{{ '/tutorial/' | relative_url }}"><i class="fas fa-tools"></i> Tutorial</a></li>
+      <li><a href="{{ '/galleria/' | relative_url }}"><i class="fas fa-images"></i> Galleria</a></li>
+      <li><a href="{{ '/chi-siamo/' | relative_url }}"><i class="fas fa-info-circle"></i> Chi Siamo</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="site-main">
+    {{ content }}
+  </main>
+
+  <!-- Sidebar AdSense Placeholder (visibile su desktop) -->
+  {% if site.google_adsense and site.google_adsense != "" %}
+  <aside class="sidebar-ad">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="{{ site.google_adsense }}"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </aside>
+  {% endif %}
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-logo">✦ CosplayItalia AI</h3>
+          <p>Il blog italiano dedicato al cosplay con articoli giornalieri e foto generate dall'intelligenza artificiale.</p>
+          <div class="footer-social">
+            <a href="https://www.paypal.com/paypalme/antoniored908" target="_blank" rel="noopener" class="social-btn paypal-btn">
+              <i class="fab fa-paypal"></i> Supportaci
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Categorie</h4>
+          <ul class="footer-links">
+            <li><a href="{{ '/guide/' | relative_url }}">Guide Cosplay</a></li>
+            <li><a href="{{ '/tutorial/' | relative_url }}">Tutorial</a></li>
+            <li><a href="{{ '/galleria/' | relative_url }}">Galleria AI</a></li>
+            <li><a href="{{ '/eventi/' | relative_url }}">Eventi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Risorse</h4>
+          <ul class="footer-links">
+            <li><a href="{{ '/chi-siamo/' | relative_url }}">Chi Siamo</a></li>
+            <li><a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a></li>
+            <li><a href="{{ '/cookie/' | relative_url }}">Cookie Policy</a></li>
+            <li><a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Supportaci</h4>
+          <p>Se ti piace il nostro contenuto, offrici un caffè!</p>
+          <a href="https://www.paypal.com/donate/?business=antoniored908%40gmail.com&no_recurring=0&item_name=Supporto+Blog+CosplayItalia+AI&currency_code=EUR" target="_blank" rel="noopener" class="paypal-donate-btn">
+            <i class="fab fa-paypal"></i> Dona con PayPal
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {{ 'now' | date: "%Y" }} CosplayItalia AI — Tutti i diritti riservati | Foto generate con AI</p>
+        <p class="footer-disclaimer">Le immagini su questo sito sono generate dall'intelligenza artificiale a scopo illustrativo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <p><i class="fas fa-cookie-bite"></i> Utilizziamo i cookie per migliorare la tua esperienza e mostrare annunci pertinenti. <a href="{{ '/cookie/' | relative_url }}">Leggi la Cookie Policy</a></p>
+      <div class="cookie-buttons">
+        <button class="btn-accept" onclick="acceptCookies()">Accetta</button>
+        <button class="btn-decline" onclick="declineCookies()">Rifiuta</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

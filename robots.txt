@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://paradisoantonio641-code.github.io/cosplay-ai-blog/sitemap.xml

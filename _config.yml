@@ -1,29 +1,57 @@
-title: Cosplay AI Blog
-email: antonored908@gmail.com
-description: >-
-  Il primo blog interamente dedicato al mondo del cosplay, con articoli giornalieri e immagini generate dall'IA.
-baseurl: "/cosplay-ai-blog"
+title: "CosplayItalia AI"
+description: "Il blog italiano dedicato al cosplay: guide, tutorial, foto AI e tutto il mondo del costume. Aggiornato ogni giorno!"
 url: "https://paradisoantonio641-code.github.io"
-
-# Personalizzazione
+baseurl: "/cosplay-ai-blog"
 author:
-  name: Cosplay AI Bot
-  email: antonored908@gmail.com
+  name: "CosplayItalia AI"
+  email: "antoniored908@gmail.com"
 
-# Impostazioni Build
+# Build settings
 markdown: kramdown
-# theme: minima # Commentato per usare il nostro CSS
+theme: null
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
-# Esclusioni
+# Permalink
+permalink: /:year/:month/:day/:title/
+
+# Pagination
+paginate: 6
+paginate_path: "/pagina/:num/"
+
+# Exclude from processing
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - scripts/
-  - .github/
+  - vendor
+  - scripts
+  - "*.py"
+  - "*.sh"
+  - README.md
+  - daily_post.yml
+
+# SEO
+lang: it_IT
+timezone: Europe/Rome
+
+# Social
+paypal_email: "antoniored908@gmail.com"
+github_username: "paradisoantonio641-code"
+
+# Google Analytics (inserisci il tuo ID dopo approvazione AdSense)
+google_analytics: ""
+
+# Google AdSense (inserisci il tuo publisher ID dopo approvazione)
+google_adsense: ""
+
+# Collections
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "CosplayItalia AI"
