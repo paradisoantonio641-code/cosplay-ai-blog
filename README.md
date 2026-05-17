@@ -32,12 +32,7 @@ cosplay-ai-blog/
 └── _config.yml         # Configurazione Jekyll
 ```
 
-## Come Aggiungere Google AdSense
 
-1. Richiedi un account su [Google AdSense](https://www.google.com/adsense/)
-2. Dopo l'approvazione, ottieni il tuo Publisher ID (es. `ca-pub-XXXXXXXXXX`)
-3. Modifica `_config.yml` e inserisci il tuo ID nel campo `google_adsense`
-4. Sostituisci `XXXXXXXXXX` negli slot degli annunci nei file `_layouts/post.html`
 
 ## Come Configurare Google Analytics
 

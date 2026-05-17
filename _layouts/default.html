@@ -34,10 +34,7 @@
   <!-- Main CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-  <!-- Google AdSense (attiva dopo approvazione) -->
-  {% if site.google_adsense and site.google_adsense != "" %}
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.google_adsense }}" crossorigin="anonymous"></script>
-  {% endif %}
+
 
   <!-- Google Analytics -->
   {% if site.google_analytics and site.google_analytics != "" %}
@@ -104,18 +101,7 @@
     {{ content }}
   </main>
 
-  <!-- Sidebar AdSense Placeholder (visibile su desktop) -->
-  {% if site.google_adsense and site.google_adsense != "" %}
-  <aside class="sidebar-ad">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="{{ site.google_adsense }}"
-         data-ad-slot="XXXXXXXXXX"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </aside>
-  {% endif %}
+
 
   <!-- Footer -->
   <footer class="site-footer">
